@@ -1,14 +1,14 @@
 const path = require('path');
 
-const entries = require('./webpackEntrypoints');
 const plugins = require('./webpackPlugins');
 
+const SRC_DIR = path.join(__dirname, '../client');
 const DIST_DIR = path.join(__dirname, '/client/dist');
 
 module.exports = {
   mode: process.env.NODE_ENV || 'production',
   resolve: { extensions: ['.js', '.jsx', '.json'] },
-  entry: entries(),
+  entry: [`${SRC_DIR}/index.jsx`],
   output: {
     filename: 'bundle.js',
     path: DIST_DIR,
