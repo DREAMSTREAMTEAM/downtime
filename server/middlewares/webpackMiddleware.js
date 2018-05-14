@@ -5,11 +5,7 @@ export default function mountWebpackMiddleware(server) {
     /* eslint-disable */
     const config = require('../../webpack/webpack.config');
     const compiler = require('webpack')(config);
-    server.use(require('webpack-dev-middleware')(compiler, {
-      noInfo: true,
-      publicPath: config.output.publicPath,
-    }));
-    server.use(require('webpack-hot-middleware')(compiler));
+    server.use(require('koa-webpack')({ compiler }))
     /* eslint-enable */
   }
 }
