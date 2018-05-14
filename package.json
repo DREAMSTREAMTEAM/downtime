@@ -8,7 +8,7 @@
     "start:dev": "nodemon --exec NODE_ENV=development babel-node server/index.js",
     "build": "webpack --config webpack.config.js && babel server -d server-dist",
     "coverage": "npx jest --coverage && cat ./coverage/lcov.info | npx coveralls",
-    "test": "jest"
+    "test": "jest --forceExit"
   },
   "repository": {
     "type": "git",
