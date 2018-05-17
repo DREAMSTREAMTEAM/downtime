@@ -51,7 +51,11 @@
     "koa-router": "^7.4.0",
     "koa-static": "^4.0.2",
     "koa-webpack": "^4.0.0",
+    "prop-type": "^0.0.1",
     "react": "^16.3.2",
-    "react-dom": "^16.3.2"
+    "react-dom": "^16.3.2",
+    "react-redux": "^5.0.7",
+    "react-router": "^4.2.0",
+    "react-router-dom": "^4.2.2"
   }
 }
